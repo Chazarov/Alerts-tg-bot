@@ -1,7 +1,1 @@
-from aiogram.types import BotCommand
-
-
-user_commands = [
-    BotCommand(command='start', description='начать работу с ботом'),
-]
-description = "/start - начать работу"
+REQESTS_INTERVAL = 1/30
