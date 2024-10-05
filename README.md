@@ -31,6 +31,8 @@ All received updates are checked for matches with records in the `Tickets` table
 
 ## Configuration
 You can change the text parameters and other constants related to the bot's interface in the `App/Bot/constants.py` file.
+Bot configuration variables (such as the interval between sending messages) can be changed in the `App/Bot/properties.py` file.
+
 
 ## Environment Variables
 
