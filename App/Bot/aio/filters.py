@@ -10,14 +10,20 @@ class AllowedChannels(Filter):
 
     ids:str
 
+    
     def __init__(self) -> None:
+        print("INIT FILTER: ", end="")
         objs = Channels.objects.all()
-        self.ids = [x.id for x in objs]
+        self.ids = [x.channel_id for x in objs]
+        print(self.ids)
 
         return
 
     async def __call__(self, message:Message) -> bool:
+        print("Filter Use: ", end="")
         if len(self.ids) == 0:
+            print("False")
             return False
-        if message.chat.id in self.ids:
+        if str(message.chat.id) in str(self.ids):
+            print("True")
             return True

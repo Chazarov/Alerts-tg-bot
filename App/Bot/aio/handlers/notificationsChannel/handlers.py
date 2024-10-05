@@ -15,14 +15,15 @@ router.channel_post.filter(AllowedChannels())
 async def text_handler(message: types.Message):
     text = message.text
 
-    matchingIds = getMatching(text)
+    matchingIds = await getMatching(text)
     
     for id in matchingIds:
+        idInt = int(id)
         try:
             await message.bot.send_message(chat_id = id, text = text)
             await asyncio.sleep(REQESTS_INTERVAL)
         except Exception as e:
-            print(f"Не удалось отправить сообщение пользователю {id}: {e}")
+            print(f"Не удалось отправить сообщение пользователю {idInt}: {e}")
 
 
 @router.channel_post(F.photo)
