@@ -6,7 +6,7 @@ from django.db import models
 
 
 class MatchingStrings(models.Model):
-    string = models.CharField(max_length=100)
+    string = models.CharField(max_length=100, unique=True)
     ticket = models.ForeignKey('Tickets', on_delete=models.CASCADE, related_name='matchings')
 
     class Meta:
