@@ -39,3 +39,8 @@ Bot configuration variables (such as the interval between sending messages) can 
 For the project to function correctly, the following environment variables must be configured:
 - `TOKEN` – the token for the Telegram bot.
 - `POSTGRES_PASS` – the password for the PostgreSQL database.
+- `POSTGERS_DB_NAME`
+- `POSTGERS_USER`
+- `POSTGERS_PORT`
+- `POSTGERS_HOST`
+
